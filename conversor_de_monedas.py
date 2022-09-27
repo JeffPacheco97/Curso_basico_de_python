@@ -1,19 +1,6 @@
-
-#DESPLIEGUE DE MENU SOLICITANDO TIPO DE TASA DE CAMBIO
-menu = """🪙 ¡Bienvenido a Convertland, tu convertidor de monedas favorito! 🪙
-
-1-Pesos colombianos (COP)
-2-Pesos Mexicanos (MXN)
-3-Pesos Argentinos (ARS)
-
-Elige la opción que más se adapte a tus necesidades. 😸
-"""
-opcion = int(input(menu))
-
 #FUNCIÓN DE CONVERTIR MONEDA
 def convertir_moneda(tipo_moneda):
-
-#SOLICITAR VALOR de MONEDA
+    #SOLICITAR VALOR de MONEDA
     moneda = input("¿Cuántos " + tipo_moneda + " tienes?: ")
 
 #CASTEAR VALORES DE STR A FLOTANTE
@@ -41,11 +28,22 @@ def convertir_moneda(tipo_moneda):
     print("El valor en dólares de sus $" + moneda + " es: $" + dolares + " dólares")
 
 
+#INTERFAZ
+#DESPLIEGUE DE MENU SOLICITANDO TIPO DE TASA DE CAMBIO
+menu = """🪙 ¡Bienvenido a Convertland, tu convertidor de monedas favorito! 🪙
+
+1-Pesos colombianos (COP)
+2-Pesos Mexicanos (MXN)
+3-Pesos Argentinos (ARS)
+
+Elige la opción que más se adapte a tus necesidades. 😸
+"""
+opcion = int(input(menu))
 
 
 #OPCIÓN 1 
 if opcion == 1:
-    convertir_moneda("pesos colombianos (COP)")
+    convertir_moneda("pesos colombianos (COP)" )
 
 #OPCIÓN 2 
 elif opcion == 2:
