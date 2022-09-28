@@ -1,6 +1,6 @@
 #FUNCIÓN DE CONVERTIR MONEDA
 def convertir_moneda(tipo_moneda):
-    #SOLICITAR VALOR de MONEDA
+#SOLICITAR VALOR de MONEDA
     moneda = input("¿Cuántos " + tipo_moneda + " tienes?: ")
 
 #CASTEAR VALORES DE STR A FLOTANTE
@@ -29,8 +29,10 @@ def convertir_moneda(tipo_moneda):
 
 
 #INTERFAZ
+#FUNCIÓN PRINCIPAL
+def run():
 #DESPLIEGUE DE MENU SOLICITANDO TIPO DE TASA DE CAMBIO
-menu = """🪙 ¡Bienvenido a Convertland, tu convertidor de monedas favorito! 🪙
+    menu = """🪙 ¡Bienvenido a Convertland, tu convertidor de monedas favorito! 🪙
 
 1-Pesos colombianos (COP)
 2-Pesos Mexicanos (MXN)
@@ -38,24 +40,26 @@ menu = """🪙 ¡Bienvenido a Convertland, tu convertidor de monedas favorito! �
 
 Elige la opción que más se adapte a tus necesidades. 😸
 """
-opcion = int(input(menu))
+    opcion = int(input(menu))
 
 
 #OPCIÓN 1 
-if opcion == 1:
-    convertir_moneda("pesos colombianos (COP)" )
+    if opcion == 1:
+        convertir_moneda("pesos colombianos (COP)" )
 
 #OPCIÓN 2 
-elif opcion == 2:
-    convertir_moneda("pesos mexicanos (MXN)")
+    elif opcion == 2:
+        convertir_moneda("pesos mexicanos (MXN)")
 
 #OPCIÓN 3 
-elif opcion == 3:
-    convertir_moneda("pesos argentinos (ARS)") 
+    elif opcion == 3:
+        convertir_moneda("pesos argentinos (ARS)") 
       
 #OPCIÓN DEFAULT
-else:
-    print("Ingresa un valor válido, no seas así. 😿")
+    else:
+        print("Ingresa un valor válido, no seas así. 😿")
 
 
-
+#PUNTO DE ENTRADA
+if __name__ == '__main__':
+    run()
