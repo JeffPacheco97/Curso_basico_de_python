@@ -1,0 +1,19 @@
+import random
+
+def run(): 
+    numero_aleatorio = random.randint(1,100)
+    numero_elegido = int(input("Elige un número del 1 al 100: "))
+    while numero_elegido != numero_aleatorio:
+        if numero_elegido < numero_aleatorio:
+            print("Frío. frío No tengas miedo, elige un número más grande. No te estamos cobrando")
+        elif numero_elegido > 100:
+            print("Pero tampoco así, mijit@. Te dijimos que de 1 a 100.")
+        else:
+            print("Caliente, caliente. Elige un número más bajo. ")
+        numero_elegido = int(input("Te damos otra oportunidad. "))
+        
+    print("¡Ganaste, amiguit@!")
+
+
+if __name__ == '__main__':
+    run()

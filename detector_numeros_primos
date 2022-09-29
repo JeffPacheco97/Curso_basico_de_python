@@ -1,0 +1,41 @@
+
+#FUNCIÓN ES_PRIMO
+def es_primo(numero):
+#COMO UNO NO ES UN NUMERO PRIMO LO NEGAMOS DE ENTRADA SI ES UN VALOR ELEGIDO POR EL USUARIO
+    if numero == 1:
+        return False
+
+    contador = 0
+#CICLO EN EL QUE SE DIVIDIRÁN TODOS LOS NÚMEROS HASTA EL ELEGIDO POR EL USUARIO
+    for i in range(1, numero + 1):
+#SI EL NÚMERO DE CICLO ACTUAL CORRESPONDE A 1 O A EL NÚMERO ELEGIDO POR EL USUARIO SALTAMOS EL CICLO
+        if i == 1 or i == numero:
+            continue    
+#Y DIVIDIMOS EL NÚMERO ELEGIDO POR EL USUARIO ENTRE CADA NÚMERO DE CICLO PARA DETERMINAR SI EL RESULTADO DE LA OPERACIÓN ES UN 0
+        if numero % i == 0:
+#SI ES UN CERO AÑADIMOS UN UNO AL CONTADOR
+            contador += 1
+#INCLUIR UN BREAK INTERRUMPE LA EJECUCIÓN DEL CICLO CUANDO ESTE YA NO ES NECESARIO
+            break
+#SI EL CONTADOR ES CERO, ES DECIR, NUNCA AUMENTA, QUIERE DECIR QUE EFECTIVAMENTE ES UN PRIMO
+    if contador == 0:
+        return True
+#SINO, SI SÍ AUMENTA, QUIERE DECIR QUE NO ES PRIMO 
+    else:
+        return False
+
+
+def run():
+#SOLICITAMOS UN NÚMERO AL USUARIO
+    numero = int(input("Escribe un número: "))
+#SI ES PRIMO INDICAMOS QUE LO ES
+    if es_primo(numero):
+        print("Es primo")
+#SI NO ES PRIMO INDICAMOS QUE NO LO ES
+    else:
+        print("No es primo")
+
+
+
+if __name__ == '__main__':
+    run()
